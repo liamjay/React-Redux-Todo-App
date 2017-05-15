@@ -1,4 +1,4 @@
-React, Flow and Webpack Setup
-=============================
+Todo Application
+=================
 
-Simple setup that uses React, Flow and Webpack.
+Simple Todo application that was created using React, Redux and Webpack
