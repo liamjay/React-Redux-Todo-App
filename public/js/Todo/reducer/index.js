@@ -3,7 +3,7 @@ import moment from 'moment';
 
 const init = List([]);
 
-export default function(todos = init, action) {
+const reducer = (todos = init, action) => {
   switch(action.type) {
     case 'ADD_TODO':
       let id = todos.count();
@@ -38,4 +38,6 @@ export default function(todos = init, action) {
     default:
       return todos;
   }
-}
+};
+
+export default reducer;
