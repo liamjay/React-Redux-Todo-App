@@ -31,7 +31,7 @@ const reducer = (todos = init, action) => {
           todo = todo.update('endDate', endDate => timeTaken);
 
           return todo;
-    	  } else {
+        } else {
   	      return todo;
     	  }
       });
