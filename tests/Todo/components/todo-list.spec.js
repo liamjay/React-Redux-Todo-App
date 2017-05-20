@@ -5,7 +5,7 @@ import TodoList from '../../../public/js/Todo/components/todo-list';
 
 describe('TodoList component', () => {
     let wrapper;
-    let mockList     = List([
+    let mockList = List([
         Map({ id: 0, isDone: false, startDate: '10:30:00', endDate: null, text: 'Test Item 1' }),
         Map({ id: 1, isDone: false, startDate: '10:35:00', endDate: null, text: 'Test Item 2' })
     ]);
