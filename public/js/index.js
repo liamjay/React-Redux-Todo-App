@@ -1,5 +1,6 @@
 import './index.scss';
 import 'bootstrap';
+import './Todo/styles/todo-app.scss';
 
 import React from 'react';
 import { render } from 'react-dom';

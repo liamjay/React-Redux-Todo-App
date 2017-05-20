@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import TodoInput from '../components/todo-input';
 import TodoList from '../components/todo-list';
 import { addTodo, toggleTodo } from '../actions/index';
-import '../styles/todo-app.scss';
 
 class TodoApp extends Component {
   constructor(props) {
