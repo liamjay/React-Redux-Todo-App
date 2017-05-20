@@ -22,30 +22,28 @@ class TodoList extends Component {
     return timeTaken;
   }
 
-  createListItems() {
-    return this.props.todos.map((todo) => {
-      return (
-        <div key={todo.get('id')} className="todo-item">
-          <div className="custom-checkbox">
-            <input type="checkbox"
-              id={"is-done-" + todo.get('id')}
-              defaultChecked={todo.get('isDone')}
-              onChange={this.props.onCheck} />
-            <label htmlFor={"is-done-" + todo.get('id')}></label>
-          </div>
-          <span className="todo-item-description">
-            {todo.get('text')} - {this.calculateTimeTaken(todo.get('startDate'), todo.get('endDate'))}
-          </span>
-          <div className="clear"></div>
-        </div>
-      );
-    });
-  }
-
   render() {
+    let listItems = this.props.todos.map((todo) => {
+        return (
+          <div key={todo.get('id')} className="todo-item">
+            <div className="custom-checkbox">
+              <input type="checkbox"
+                id={"is-done-" + todo.get('id')}
+                defaultChecked={todo.get('isDone')}
+                onChange={this.props.onCheck} />
+              <label htmlFor={"is-done-" + todo.get('id')}></label>
+            </div>
+            <span className="todo-item-description">
+              {todo.get('text')} - {this.calculateTimeTaken(todo.get('startDate'), todo.get('endDate'))}
+            </span>
+            <div className="clear"></div>
+          </div>
+        );
+    });
+
     return (
       <div id="todo-items">
-        {this.createListItems()}
+        {listItems}
       </div>
     );
   }
