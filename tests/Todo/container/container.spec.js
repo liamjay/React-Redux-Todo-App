@@ -11,7 +11,8 @@ describe('TodoApp Container', () => {
     ]);
 
     const props = {
-        addTodo: jest.fn()
+        addTodo: jest.fn(),
+	toggleTodo: jest.fn()
     };
 
     const mockStore = configureStore();
@@ -20,22 +21,10 @@ describe('TodoApp Container', () => {
 
     beforeEach(() => {
         store = mockStore(initialState);
-        wrapper = mount(<Provider store={store}><TodoApp /></Provider>);
+	wrapper = mount(<Provider store={store}><TodoApp /></Provider>);
     });
 
     it('Should have rendered the component correctly', () => {
         expect(wrapper.length).toEqual(1)
-    });
-
-    it('Should call addTodo when length of text is greater than zero', () => {
-        const input = wrapper.find('#todo-input');
-        input.value = 'Test Item 1';
-
-        expect(input.value).toEqual('Test Item 1');
-
-        const button = wrapper.find('#submitBtn');
-        button.simulate('click');
-
-        expect(props.addTodo.mock.calls.length).toBe(1);
     });
 });
