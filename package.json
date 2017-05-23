@@ -26,6 +26,7 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.0",
+    "electron-prebuilt": "^1.4.13",
     "enzyme": "^2.8.2",
     "html-webpack-plugin": "^2.26.0",
     "jest": "^19.0.2",
